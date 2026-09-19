@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Community | Samen bouwen aan een kerk | De Blockertjes</title>
+  <meta name="description" content="Welkom op de officiële Minecraft server van De Blockertjes. Samen bouwen we aan een virtuele kerk om onze christelijke gemeenschap te laten groeien.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="De Blockertjes Minecraft Server - Samen bouwen aan een kerk">
+  <meta property="og:description" content="Bouw mee aan onze virtuele kerk en versterk onze christelijke gemeenschap in Minecraft. Server adres: minecraft.deblockertjes.be">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.deblockertjes.be/minecraft/">
+  <meta property="og:image" content="kerk_minecraft_deblockertjes.jpg">
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="minecraft.css">
+</head>
+<body>
+
+  <!-- Gebrandschilderd glas kleurenbalk -->
+  <div class="mc-stained-glass-ribbon" aria-hidden="true"></div>
+
+  <!-- Bovenste navigatiebalk -->
+  <header class="mc-topbar">
+    <div class="mc-topbar__inner">
+      <a class="mc-brand" href="https://deblockertjes.be/">
+        <img class="mc-brand__logo" src="assets/images/logo-block-transparent.png" alt="De Blockertjes kubus logo">
+        <div class="mc-brand__titles">
+          <span class="mc-brand__name">✝ DE BLOCKERTJES</span>
+          <span class="mc-brand__sub">MINECRAFT COMMUNITY</span>
+        </div>
+      </a>
+
+      <nav aria-label="Minecraft navigatie">
+        <ul class="mc-nav-links">
+          <li><a href="#de-kerk">Het Kerkproject</a></li>
+          <li><a href="#ontwerp">Het Ontwerp</a></li>
+          <li><a href="#hoe-verbinden">Hoe Meespelen?</a></li>
+          <li><a href="#regels">Bouwerscode</a></li>
+          <li><a class="mc-btn-back" href="https://deblockertjes.be/">Terug naar hoofdsite</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Hero Sectie -->
+    <section class="mc-hero">
+      <div class="mc-hero__card mc-box mc-box--grass">
+        
+        <div class="mc-hero__badge-row">
+          <div class="mc-hero__badge">✝ Kerk in Aalst · Sint-Anna</div>
+          <div class="mc-hero__badge mc-hero__badge--parochie">✦ Officiële Server ✦</div>
+        </div>
+        
+        <div class="mc-hero__cube-wrap">
+          <img class="mc-hero__cube" src="assets/images/logo-block-transparent.png" alt="Zwevend Minecraft blok De Blockertjes">
+        </div>
+
+        <h1 class="mc-hero__title">
+          Samen bouwen aan een <span>Kerk in Minecraft</span>
+        </h1>
+
+        <div class="mc-quote">
+          <span>✝</span>
+          <em>"Gij zijt Petrus, en op deze rots zal Ik mijn kerk bouwen."</em>
+          <span>— Matteüs 16:18</span>
+        </div>
+
+        <p class="mc-hero__lead">
+          Welkom in de Minecraft-wereld van De Blockertjes! In deze virtuele wereld slaan we de handen in elkaar om vanuit onze christelijke gemeenschap een prachtige kerk en dorpsplein op te richten. Een plek waar geloof, creativiteit en vriendschap elkaar ontmoeten — steen voor steen, blokje voor blokje.
+        </p>
+
+        <!-- Server IP & Status Box -->
+        <div class="mc-server-card">
+          <div class="mc-server-card__top">
+            <span class="mc-server-card__label">Server Adres (Java Edition)</span>
+            <div id="mc-status-badge" class="mc-status-badge" title="Server status wordt gecontroleerd">
+              <span id="mc-status-dot" class="mc-status-dot"></span>
+              <span id="mc-status-text">Status laden...</span>
+            </div>
+          </div>
+
+          <div class="mc-ip-row">
+            <div id="mc-ip-text" class="mc-ip-display" tabindex="0" role="button" aria-label="Server IP adres: minecraft.deblockertjes.be">
+              minecraft.deblockertjes.be
+            </div>
+            <button id="copy-ip-btn" class="mc-btn mc-btn--gold" type="button" aria-label="Kopieer server adres naar klembord">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Kopieer IP</span>
+            </button>
+          </div>
+
+          <div class="mc-server-card__info">
+            <span>Editie: <strong>Minecraft Java Edition</strong></span>
+            <span>Standaard poort: <strong>25565</strong></span>
+            <span>Geschikt voor: <strong>Pc &amp; Mac</strong></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sectie: Het Kerkproject & De Bouwstatus -->
+    <section id="de-kerk" class="mc-container">
+      
+      <!-- BELANGRIJKE STATUS CALLOUT: Er staat nog geen kerk! -->
+      <div class="mc-status-callout">
+        <span class="mc-status-callout__icon" aria-hidden="true">⛏️</span>
+        <div class="mc-status-callout__content">
+          <h3>Belangrijk: Er staat op dit moment nog géén kerk!</h3>
+          <p>
+            Onze server is vers opgestart en de wereld ligt nog helemaal ongerept en open op ons te wachten. <strong>Er is nog geen enkel blokje geplaatst.</strong> Dat betekent dat we samen vanaf nul beginnen: de grondstoffen moeten nog gedolven worden, de fundering moet nog gelegd worden en de muren moeten nog rijzen. <strong>Jij kan dus vanaf de allereerste steen meehelpen!</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- HET ONTWERP SHOWCASE -->
+      <div id="ontwerp" class="mc-blueprint-showcase">
+        <div class="mc-blueprint-header">
+          <h3 class="mc-blueprint-title">
+            <span>⛪</span> Ons Bouwplan &amp; Droomontwerp
+          </h3>
+          <span class="mc-blueprint-tag">INSPIRATIE &amp; VISIE</span>
+        </div>
+        
+        <div class="mc-blueprint-image-wrap">
+          <img class="mc-blueprint-image" src="kerk_minecraft_deblockertjes.jpg" alt="Het droomontwerp van de kerk van De Blockertjes in Minecraft: een natuurstenen kerk met klokkentoren, kruis, gebrandschilderd glas en lantaarns">
+        </div>
+
+        <div class="mc-blueprint-caption">
+          <p>
+            <strong>Dit is wat we samen willen bouwen:</strong> Een sfeervolle, robuuste dorpskerk van natuursteen en cobble, met een trotse klokkentoren, een luidklok, gebrandschilderde glasramen die het zonlicht vangen, en een warm houten portaal met lantaarns. Geïnspireerd op onze eigen Sint-Annakerk in Aalst!
+          </p>
+          <div class="mc-jesus-guide">
+            <img src="assets/images/jezus/jezus_blij.png" alt="Blije Jezus">
+            <span>"Bouw je mee aan Mijn huis?"</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- De gewijde elementen van onze kerk -->
+      <div class="mc-section-header">
+        <p class="mc-section-header__tag"><span>✝</span> Gewijde Architectuur <span>✝</span></p>
+        <h2 class="mc-section-header__title">Wat gaan we allemaal bouwen?</h2>
+        <p class="mc-section-header__desc">
+          Een kerk is meer dan alleen een dak boven het hoofd. Elk onderdeel heeft een betekenis en brengt ons dichter bij God en elkaar.
+        </p>
+      </div>
+
+      <div class="mc-grid-4">
+        <article class="mc-liturgy-card">
+          <h3 class="mc-liturgy-card__title"><span>✝</span> Het Altaar &amp; Koor</h3>
+          <p class="mc-liturgy-card__desc">
+            Het heilige middelpunt van de kerk voor gebed, dankzegging en de eucharistie. We maken het van gepolijst gesteente met een tabernakel en het kruisbeeld.
+          </p>
+        </article>
+
+        <article class="mc-liturgy-card">
+          <h3 class="mc-liturgy-card__title"><span>🔔</span> De Klokkentoren</h3>
+          <p class="mc-liturgy-card__desc">
+            Het hoogste punt met een luidklok (noteblocks of bellen) die tot ver in de Minecraft-vallei te horen is om de gemeenschap op te roepen voor de viering.
+          </p>
+        </article>
+
+        <article class="mc-liturgy-card">
+          <h3 class="mc-liturgy-card__title"><span>🎨</span> Glas-in-Lood</h3>
+          <p class="mc-liturgy-card__desc">
+            Rijke kleuren (lapis lazuli, rood en geel) in de hoge vensters, waardoor het zonlicht schitterende patronen werpt op de stenen vloer van het schip.
+          </p>
+        </article>
+
+        <article class="mc-liturgy-card">
+          <h3 class="mc-liturgy-card__title"><span>🕯️</span> Het Parochieplein</h3>
+          <p class="mc-liturgy-card__desc">
+            Een gezellig plein rondom de kerk met bloemenperken, zitbanken, lantaarns en bomen waar spelers na de bijeenkomst kunnen rondhangen en plannen smeden.
+          </p>
+        </article>
+      </div>
+
+      <!-- Pijlers van de Community -->
+      <div style="margin-top: 3.5rem;">
+        <div class="mc-section-header">
+          <p class="mc-section-header__tag"><span>🤝</span> Geloof &amp; Gemeenschap <span>🤝</span></p>
+          <h2 class="mc-section-header__title">Waarom doen we dit?</h2>
+          <p class="mc-section-header__desc">
+            Als catechisten bij Kerk in Aalst willen we tonen dat geloof levend en verbindend is, waar we ook zijn — in de kerkbanken én achter het toetsenbord.
+          </p>
+        </div>
+
+        <div class="mc-grid-3">
+          <article class="mc-card mc-box">
+            <span class="mc-card__icon" aria-hidden="true">🧱</span>
+            <h3 class="mc-card__title">Samen Bouwen</h3>
+            <p class="mc-card__text">
+              Geen eenzame survival, maar een gemeenschappelijk doel. We overleggen, helpen elkaar met steigers en materialen, en vieren elke nieuwe toren of boog die klaar is.
+            </p>
+          </article>
+
+          <article class="mc-card mc-box">
+            <span class="mc-card__icon" aria-hidden="true">🕊️</span>
+            <h3 class="mc-card__title">Warme Gemeenschap</h3>
+            <p class="mc-card__text">
+              Net zoals in de catechese en het echte leven staan vriendelijkheid, bemoediging en naastenliefde centraal. Iedereen kan op zijn eigen tempo meedoen.
+            </p>
+          </article>
+
+          <article class="mc-card mc-box">
+            <span class="mc-card__icon" aria-hidden="true">✨</span>
+            <h3 class="mc-card__title">Verwondering</h3>
+            <p class="mc-card__text">
+              Ontdek hoe symboliek, lichtinval en architectuur samenkomen. Van mozaïeken tot bijbelse verhalen in blokkenkunst: laat je creativiteit de vrije loop!
+            </p>
+          </article>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Sectie: Hoe te verbinden? -->
+    <section id="hoe-verbinden" class="mc-container">
+      <div class="mc-section-header">
+        <p class="mc-section-header__tag"><span>🎮</span> Handleiding <span>🎮</span></p>
+        <h2 class="mc-section-header__title">Hoe doe je mee op de server?</h2>
+        <p class="mc-section-header__desc">
+          Verbinden is heel eenvoudig. Volg deze vier stappen in Minecraft en stap binnen op de bouwplaats van onze kerk!
+        </p>
+      </div>
+
+      <div class="mc-grid-4">
+        <article class="mc-step-card">
+          <div class="mc-step-num">1</div>
+          <h3 class="mc-step-title">Start Minecraft</h3>
+          <p class="mc-step-desc">
+            Open de officiële <strong>Minecraft Launcher</strong> op je pc of laptop en start de nieuwste versie van <strong>Minecraft Java Edition</strong> op.
+          </p>
+        </article>
+
+        <article class="mc-step-card">
+          <div class="mc-step-num">2</div>
+          <h3 class="mc-step-title">Kies Meerspelerspel</h3>
+          <p class="mc-step-desc">
+            Klik in het hoofdmenu van het spel op <strong>Meerspelerspel</strong> (Multiplayer).
+          </p>
+        </article>
+
+        <article class="mc-step-card">
+          <div class="mc-step-num">3</div>
+          <h3 class="mc-step-title">Server Toevoegen</h3>
+          <p class="mc-step-desc">
+            Klik rechtsonder op <strong>Server Toevoegen</strong> (Add Server). Vul bij Servernaam bv. <code>De Blockertjes Kerk</code> in en bij Serveradres: <code>minecraft.deblockertjes.be</code>.
+          </p>
+        </article>
+
+        <article class="mc-step-card">
+          <div class="mc-step-num">4</div>
+          <h3 class="mc-step-title">Verbind &amp; Bouw!</h3>
+          <p class="mc-step-desc">
+            Klik op <strong>Gereed</strong> (Done), selecteer de server in je lijst en klik op <strong>Deelnemen</strong> (Join Server). Welkom op de bouwplaats!
+          </p>
+        </article>
+      </div>
+
+      <!-- Quick reminder callout -->
+      <div style="margin-top: 2rem; text-align: center;">
+        <button class="mc-btn mc-btn--green" onclick="document.getElementById('copy-ip-btn').click();" type="button">
+          📋 Kopieer direct het Server IP: minecraft.deblockertjes.be
+        </button>
+      </div>
+    </section>
+
+    <!-- Sectie: Server Regels (De Bouwerscode) -->
+    <section id="regels" class="mc-container">
+      <div class="mc-section-header">
+        <p class="mc-section-header__tag"><span>✝</span> De Goede Bouwers Code <span>✝</span></p>
+        <h2 class="mc-section-header__title">Onze Christelijke Server Afspraken</h2>
+        <p class="mc-section-header__desc">
+          <em>"Heb je naaste lief als jezelf"</em> — Om het voor iedereen fijn, veilig en opbouwend te houden, hanteren we deze gouden afspraken in onze wereld.
+        </p>
+      </div>
+
+      <div class="mc-grid-2">
+        <div class="mc-rule-card">
+          <h3 class="mc-rule-card__title">🛡️ Geen Griefing of Vernieling</h3>
+          <p class="mc-rule-card__desc">
+            Breek nooit bouwwerken van anderen af en plaats geen TNT of lava. Wat iemand met zorg en toewijding gebouwd heeft, respecteren en bewonderen we.
+          </p>
+        </div>
+
+        <div class="mc-rule-card">
+          <h3 class="mc-rule-card__title">💬 Vriendelijke &amp; Bemoedigende Chat</h3>
+          <p class="mc-rule-card__desc">
+            We behandelen elkaar met respect en geduld. Geen scheldwoorden, pestgedrag of negativiteit. Onze chat is een plek van warmte en gezelligheid.
+          </p>
+        </div>
+
+        <div class="mc-rule-card">
+          <h3 class="mc-rule-card__title">📦 Eerlijk Delen &amp; Naastenliefde</h3>
+          <p class="mc-rule-card__desc">
+            Neem geen spullen uit kisten van anderen zonder toestemming. We delen materialen met wie het nodig heeft om samen verder te bouwen.
+          </p>
+        </div>
+
+        <div class="mc-rule-card">
+          <h3 class="mc-rule-card__title">⛪ Toewijding aan het Kerkproject</h3>
+          <p class="mc-rule-card__desc">
+            Draag je steentje bij aan de centrale kerk, het plein of de omringende wegen. Vraag gerust aan medebouwers waar nog handen of grondstoffen nodig zijn!
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast notificatie -->
+  <div id="mc-toast" class="mc-toast" role="alert" aria-live="polite">
+    ✔ IP gekopieerd naar klembord!
+  </div>
+
+  <!-- Footer -->
+  <footer class="mc-footer">
+    <div class="mc-footer__inner">
+      <div>
+        <h4 class="mc-footer__title">✝ DE BLOCKERTJES MINECRAFT</h4>
+        <p style="margin: 0 0 1rem; line-height: 1.6; max-width: 420px;">
+          Samen bouwen we aan een virtuele kerk als ontmoetingsplek voor onze parochie, vormelingen, misdienaars en vrienden van Kerk in Aalst.
+        </p>
+        <p style="margin: 0;">
+          Server: <code style="color: var(--mc-diamond); font-family: var(--font-pixel); font-size: 0.8rem;">minecraft.deblockertjes.be</code>
+        </p>
+      </div>
+
+      <div>
+        <h4 class="mc-footer__title">PAGINA'S</h4>
+        <ul class="mc-footer__links">
+          <li><a href="https://deblockertjes.be/">Hoofdsite De Blockertjes</a></li>
+          <li><a href="https://deblockertjes.be/catechese/">Onze Catechese (Sint-Anna)</a></li>
+          <li><a href="https://deblockertjes.be/catechese/mini-jezusjes/">Mini Jezusjes</a></li>
+          <li><a href="https://deblockertjes.be/over-ons/">Over ons gezin</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="mc-footer__title">VOLG ONS</h4>
+        <ul class="mc-footer__links">
+          <li><a href="https://www.youtube.com/@DeBlockertjes" target="_blank" rel="noreferrer">YouTube</a></li>
+          <li><a href="https://www.tiktok.com/@deblockertjes" target="_blank" rel="noreferrer">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mc-footer__bottom">
+      <div>&copy; 2026 De Blockertjes · Kerk in Aalst (Kerkplek Sint-Anna). Alle rechten voorbehouden.</div>
+      <div class="mc-disclaimer">
+        Niet een officieel Minecraft-product. Niet goedgekeurd door of geassocieerd met Mojang of Microsoft.
+      </div>
+    </div>
+  </footer>
+
+  <script src="minecraft.js"></script>
+  <script data-goatcounter="https://deblockertjes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+
