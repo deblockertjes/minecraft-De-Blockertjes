@@ -1,6 +1,6 @@
 /**
  * De Blockertjes - Minecraft Community Scripts
- * - Real-time server status check via mcsrvstat.us
+ * - Real-time server status check via mcstatus.io
  * - Eén-klik IP-adres klembord kopieerfunctie met visuele toast
  */
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!statusBadge || !statusText) return;
 
     try {
-      const response = await fetch(`https://api.mcsrvstat.us/2/${serverAddress}`);
+      const response = await fetch(`https://api.mcstatus.io/v2/status/java/${serverAddress}`);
       if (!response.ok) throw new Error("API antwoordt niet");
 
       const data = await response.json();

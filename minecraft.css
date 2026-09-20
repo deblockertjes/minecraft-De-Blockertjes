@@ -68,21 +68,17 @@ body {
 }
 
 /* ==========================================================================
-   Stained Glass Ribbon (Gebrandschilderd Glas Bovenrand)
+   Aalsterse Vlag Bovenrand (Rood - Wit - Geel)
    ========================================================================== */
 .mc-stained-glass-ribbon {
   height: 6px;
   width: 100%;
   background: linear-gradient(90deg, 
-    #b91c1c 0%, #b91c1c 14%, 
-    #ea580c 14%, #ea580c 28%, 
-    #eab308 28%, #eab308 42%, 
-    #16a34a 42%, #16a34a 57%, 
-    #0284c7 57%, #0284c7 71%, 
-    #7c3aed 71%, #7c3aed 85%, 
-    #db2777 85%, #db2777 100%
+    #c92a2a 0%, #c92a2a 33.333%, 
+    #ffffff 33.333%, #ffffff 66.666%, 
+    #fdb813 66.666%, #fdb813 100%
   );
-  box-shadow: 0 0 14px rgba(234, 179, 8, 0.45);
+  box-shadow: 0 0 12px rgba(253, 184, 19, 0.35);
 }
 
 /* ==========================================================================
