@@ -37,6 +37,7 @@
           <li><a href="#de-kerk">Het Kerkproject</a></li>
           <li><a href="#ontwerp">Het Ontwerp</a></li>
           <li><a href="bouwinstructies.html" style="color: var(--catholic-gold);">📐 Bouwinstructies</a></li>
+          <li><a href="#whitelist" style="color: var(--mc-diamond);">✨ Whitelist</a></li>
           <li><a href="#hoe-verbinden">Hoe Meespelen?</a></li>
           <li><a href="#regels">Bouwerscode</a></li>
           <li><a class="mc-btn-back" href="https://deblockertjes.be/">Terug naar hoofdsite</a></li>
@@ -100,7 +101,14 @@
           <div class="mc-server-card__info">
             <span>Editie: <strong>Minecraft Java Edition</strong></span>
             <span>Standaard poort: <strong>25565</strong></span>
-            <span>Geschikt voor: <strong>Pc &amp; Mac</strong></span>
+            <span>Toegang: <strong style="color: var(--catholic-gold);">🔒 Whitelist Actief</strong></span>
+          </div>
+
+          <div style="margin-top: 1rem; padding-top: 0.85rem; border-top: 1px dashed rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap;">
+            <span style="font-size: 0.9rem; color: #a9bacb;">Nog geen toegang tot de server?</span>
+            <a href="#whitelist" class="mc-btn mc-btn--primary" style="font-size: 0.85rem; padding: 0.5rem 1.1rem; text-decoration: none;">
+              ✍️ Vraag Whitelist Aan
+            </a>
           </div>
         </div>
 
@@ -230,6 +238,126 @@
 
     </section>
 
+    <!-- Sectie: Whitelist Aanvragen -->
+    <section id="whitelist" class="mc-container">
+      <div class="mc-section-header">
+        <p class="mc-section-header__tag"><span>🔒</span> Toegangscontrole <span>🔒</span></p>
+        <h2 class="mc-section-header__title">Meld je aan voor de Whitelist</h2>
+        <p class="mc-section-header__desc">
+          Onze server is beveiligd met een whitelist zodat we weten wie er meebouwt en onze wereld gezellig en veilig blijft. Geef je Minecraft Java gebruikersnaam door en we voegen je zo snel mogelijk toe!
+        </p>
+      </div>
+
+      <div class="mc-whitelist-container">
+        <div class="mc-whitelist-grid">
+          
+          <!-- Linkerkolom: Info & Live Skin Preview -->
+          <div class="mc-whitelist-info">
+            <div class="mc-whitelist-avatar-card">
+              <div class="mc-whitelist-avatar-wrap">
+                <img id="mc-avatar-preview" src="https://mc-heads.net/avatar/MHF_Steve/80" alt="Minecraft speler skin" width="64" height="64">
+              </div>
+              <div class="mc-whitelist-avatar-label">
+                <span id="mc-avatar-username">Minecraft Bouwer</span>
+                <small id="mc-avatar-status">Typ je gebruikersnaam</small>
+              </div>
+            </div>
+
+            <div class="mc-whitelist-instructions">
+              <h4><span>💡</span> Goed om te weten:</h4>
+              <ul>
+                <li><strong>Minecraft Java Editie:</strong> Vul je exacte in-game gebruikersnaam in (let op hoofdletters en kleine letters).</li>
+                <li><strong>Waar vind je dit?</strong> Open de Minecraft Launcher: je naam staat linksboven of op je profiel.</li>
+                <li><strong>Privacy:</strong> Je gegevens worden uitsluitend gebruikt om je toe te voegen aan onze Minecraft server.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Rechterkolom: Het Formulier -->
+          <div class="mc-whitelist-form-wrap">
+            <form id="mc-whitelist-form" class="mc-whitelist-form" novalidate>
+              
+              <!-- Web3Forms Access Key: vul hier je gratis sleutel in van web3forms.com -->
+              <!-- Je e-mailadres is veilig gekoppeld aan deze sleutel en staat NOOIT in de broncode -->
+              <input type="hidden" name="access_key" id="mc-access-key" value="JOUW_ACCESS_KEY_HIER">
+              <input type="hidden" name="subject" value="Nieuwe Minecraft Whitelist Aanvraag: De Blockertjes">
+              <input type="hidden" name="from_name" value="De Blockertjes Minecraft Server">
+              
+              <!-- Anti-bot honeypot veld -->
+              <input type="checkbox" name="botcheck" class="mc-hidden-honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+
+              <!-- Veld 1: Minecraft Gebruikersnaam (Verplicht) -->
+              <div class="mc-form-group">
+                <label for="mc-ign" class="mc-form-label">
+                  Minecraft Gebruikersnaam (IGN) <span class="mc-form-required">*</span>
+                </label>
+                <div class="mc-input-wrapper">
+                  <span class="mc-input-icon">🎮</span>
+                  <input 
+                    type="text" 
+                    id="mc-ign" 
+                    name="minecraft_username" 
+                    class="mc-form-input" 
+                    placeholder="bv. Steve_2026" 
+                    pattern="^[a-zA-Z0-9_]{3,16}$" 
+                    maxlength="16" 
+                    required 
+                    autocomplete="off"
+                    spellcheck="false"
+                  >
+                </div>
+                <span class="mc-form-hint">3 tot 16 tekens (letters, cijfers en underscores).</span>
+              </div>
+
+              <!-- Veld 2: E-mailadres (Optioneel) -->
+              <div class="mc-form-group">
+                <label for="mc-email" class="mc-form-label">
+                  Jouw E-mailadres <span class="mc-form-optional">(optioneel)</span>
+                </label>
+                <div class="mc-input-wrapper">
+                  <span class="mc-input-icon">📧</span>
+                  <input 
+                    type="email" 
+                    id="mc-email" 
+                    name="email" 
+                    class="mc-form-input" 
+                    placeholder="naam@voorbeeld.be"
+                    autocomplete="email"
+                  >
+                </div>
+                <span class="mc-form-hint">Zodat we je kunnen mailen zodra je op de whitelist staat.</span>
+              </div>
+
+              <!-- Veld 3: Wie ben je / Boodschap (Optioneel) -->
+              <div class="mc-form-group">
+                <label for="mc-notes" class="mc-form-label">
+                  Wie ben je? of Korte Boodschap <span class="mc-form-optional">(optioneel)</span>
+                </label>
+                <textarea 
+                  id="mc-notes" 
+                  name="message" 
+                  class="mc-form-textarea" 
+                  rows="3" 
+                  placeholder="bv. Vormeling van Sint-Anna, catechist of vriend van de parochie..."
+                ></textarea>
+              </div>
+
+              <!-- Status Feedback Boodschap -->
+              <div id="mc-form-status" class="mc-form-status" role="alert" style="display: none;"></div>
+
+              <!-- Submit Knop -->
+              <button type="submit" id="mc-submit-btn" class="mc-btn mc-btn--primary mc-btn--submit">
+                <span id="mc-submit-text">✉️ Whitelist Aanvragen</span>
+                <span id="mc-submit-spinner" class="mc-spinner" style="display: none;" aria-hidden="true"></span>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Sectie: Hoe te verbinden? -->
     <section id="hoe-verbinden" class="mc-container">
       <div class="mc-section-header">
@@ -243,6 +371,14 @@
       <div class="mc-grid-4">
         <article class="mc-step-card">
           <div class="mc-step-num">1</div>
+          <h3 class="mc-step-title">Whitelist Aanvragen</h3>
+          <p class="mc-step-desc">
+            Vul het <a href="#whitelist" style="color: var(--catholic-gold); text-decoration: underline;">formulier hierboven</a> in zodat we je gebruikersnaam op de toegangslijst kunnen zetten.
+          </p>
+        </article>
+
+        <article class="mc-step-card">
+          <div class="mc-step-num">2</div>
           <h3 class="mc-step-title">Start Minecraft</h3>
           <p class="mc-step-desc">
             Open de officiële <strong>Minecraft Launcher</strong> op je pc of laptop en start de nieuwste versie van <strong>Minecraft Java Edition</strong> op.
@@ -250,18 +386,10 @@
         </article>
 
         <article class="mc-step-card">
-          <div class="mc-step-num">2</div>
-          <h3 class="mc-step-title">Kies Meerspelerspel</h3>
-          <p class="mc-step-desc">
-            Klik in het hoofdmenu van het spel op <strong>Meerspelerspel</strong> (Multiplayer).
-          </p>
-        </article>
-
-        <article class="mc-step-card">
           <div class="mc-step-num">3</div>
           <h3 class="mc-step-title">Server Toevoegen</h3>
           <p class="mc-step-desc">
-            Klik rechtsonder op <strong>Server Toevoegen</strong> (Add Server). Vul bij Servernaam bv. <code>De Blockertjes Kerk</code> in en bij Serveradres: <code>minecraft.deblockertjes.be</code>.
+            Klik op <strong>Meerspelerspel</strong> en daarna op <strong>Server Toevoegen</strong>. Vul bij Serveradres: <code>minecraft.deblockertjes.be</code> in.
           </p>
         </article>
 
@@ -269,7 +397,7 @@
           <div class="mc-step-num">4</div>
           <h3 class="mc-step-title">Verbind &amp; Bouw!</h3>
           <p class="mc-step-desc">
-            Klik op <strong>Gereed</strong> (Done), selecteer de server in je lijst en klik op <strong>Deelnemen</strong> (Join Server). Welkom op de bouwplaats!
+            Zodra je toegevoegd bent, selecteer je de server in je lijst en klik je op <strong>Deelnemen</strong>. Welkom op de bouwplaats!
           </p>
         </article>
       </div>
@@ -346,6 +474,7 @@
       <div>
         <h4 class="mc-footer__title">PAGINA'S</h4>
         <ul class="mc-footer__links">
+          <li><a href="#whitelist" style="color: var(--mc-diamond);">✨ Whitelist Aanvragen</a></li>
           <li><a href="bouwinstructies.html" style="color: var(--catholic-gold);">📐 Bouwinstructies &amp; Plattegrond</a></li>
           <li><a href="https://deblockertjes.be/">Hoofdsite De Blockertjes</a></li>
           <li><a href="https://deblockertjes.be/catechese/">Onze Catechese (Sint-Anna)</a></li>
